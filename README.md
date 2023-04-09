@@ -1,13 +1,11 @@
 # JAVA COMPLETO NELIOALVES
- Java COMPLETO 2023 Programação Orientada a Objetos +Projetos    
- 
-O que é Java? • Linguagem de programação (regras sintáticas) 
 
-• Plataforma de desenvolvimento e execução 
+Java COMPLETO 2023 Programação Orientada a Objetos +Projetos
 
-• Bibliotecas (API) • Ambientes de execução
+O que é Java? • Linguagem de programação (regras sintáticas)
 
-O Java é uma coisa boa,gostei dele, pois é muito organizado. Quase tudo nele segue regras simples.
+Plataforma de desenvolvimento e execução
+Bibliotecas (API) • Ambientes de execução
 
 Estudando e  aprendendo ao programar em Java incluem:
 
@@ -18,8 +16,9 @@ Herança e polimorfismo
 Exceções e tratamento de erros
 Coleções, como Listas e Mapas
 Manipulação de arquivos e entradas/saídas
-Threads e concorrência
+
+O Java é uma coisa boa,gostei dele, pois é muito organizado. Quase tudo nele segue regras simples.
  
  
- 
+
  
