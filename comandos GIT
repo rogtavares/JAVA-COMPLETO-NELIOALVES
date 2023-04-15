@@ -1,0 +1,59 @@
+
+Para equipes grandes é comum que os desenvolvedores estejam trabalhando em diferentes partes do sistema ao mesmo tempo. Imagine que o sistema principal é como uma árvore, e os desenvolvedores trabalham em pequenas modificações (galhos de árvore) que são incorporados na árvore principal quando estão prontos. Assim, os desenvolvedores podem trabalhar paralelamente e entregar com qualidade.
+
+
+É importante considerar que o ramo principal, ou seja a árvore principal, é master .
+Além disso, o HEAD é uma referência para a agência atual, ou seja, onde o código está alocado no momento. Por padrão, o HEAD aponta para o branch principal, o master .
+
+
+Branch — Comandos principais
+git branch novo-branch - Cria o branch novo-branch.
+git checkout -b novo-branch - Criar a filial e mudar o código para a filial novo-filial .
+git checkout novo-branch - Muda o código para o branch novo-branch.
+git checkout master - Muda o código para a árvore. Filial principal: mestre / principal
+git branch -d novo-branch - Excluir ou branch novo-branch .
+git branch - Lista de branches criados .
+git branch -v - Listar os branches criados com os logs de commit.
+git push origin novo-branch - Criando um branch remoto com o mesmo nome .
+git push origin novo-branch:new-branch - Criando um branch remoto com nome diferente .
+git checkout -b novo-branch origin/novo-branch - Baixar um branch remoto para edição.
+git merge novo-branch - Realiza o merge entre os branches , ou seja, junta o ramo na árvore principal
+.gitignore
+O arquivo com nome .gitignore desabilita o envio de outros arquivos para o repositório .git. Em alguns projetos de arquivos existem muito importantes, que possuem configurações específicas ou autenticações, esses arquivos devem ser ignorados para a demonstração no repositório. Além disso, os arquivos de construção e biblioteca devem ser inuteis no git, somente enxendo o repositório de informações desnecessárias.
+
+Adicionar arquivo/diretório
+No git, primeiro você adiciona os arquivos para depois enviar como modificações para o programa remoto. As seguintes variações de adição são interessantes:
+
+adicionar git. - Adiciona todos os arquivos/diretórios modificados.
+git add meu_programa.py - Adiciona somente o arquivo meu_programa.py.
+git add meu_diretório - Adiciona somente o diretório meu_diretório.
+git add -f meu_programa_gitignore.py - Adiciona um arquivo que está no .gitignore.
+Remover arquivo/diretório
+git rm meu_arquivo.txt - Removedor de arquivo.
+git rm -r diretório - Remover diretório.
+Comitar arquivo/diretório
+git commit meu_programa.py - Comitar um arquivo.
+git commit meu_arquivo.txt meu_outro_arquivo.txt - Comitar vários arquivos.
+git commit meuarquivo.txt -m “minha mensagem de commit” - Comitar informando mensagem.
+Verificando modificações/estado
+gitk - modificações totais do projeto.
+git diff - modificações antes de enviar as modificações para o repositório remoto (commit).
+git status - estado dos arquivos/diretório.
+Histórico
+git log - Exibe histórico dos últimos commits.
+git log -p -3 - Exibe histórico com diff dos últimos 3 commits.
+git log - - <caminho_do_arquivo> - Exibir histório do arquivo no caminho_do_arquivo.
+git log - - pretty=oneline - Exibe histórico de commits com informações resumidas em uma linha. É possível realizar a exibição com formatação específica, verifique aqui .
+git log - - diff-filter=M - - <caminho_do_arquivo> - Exibe histórico de modificações de um arquivo.
+git log - - author=usuário - Exibir histórico de um determinado autor
+Reescrevendo o histórico
+git commit -- emenda -m “Minha nova mensagem” - Alterando mensagens de commit já realizadas.
+git rebase -i HEAD~3 - Alterar últimos commits, modificando as mensagens. Mais detalhes sobre o funcionamento .
+Estoque
+O Stash é um armazenamento temporário para modificações que ainda não podem ser inseridas no commit. Se você precisar mudar o branch, e já tiver feito as modificações, você realiza o stash para salvar temporariamente as modificações e inserir no branch desejado.
+
+git stash - Cria um stash, salva temporariamente as modificações .
+git stash list - Lista de stashes criados .
+git stash apply - Volta ao último stash .
+git stash apply stash@{2} - Volta ao stash com índice 2 .
+git stash branch meu_branch - Cria um branch a partir de um stash
